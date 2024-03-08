@@ -14,6 +14,7 @@ int main(int argc, char * argv[]) try
     // Configure and start the pipeline
     p.start();
 
+    // Once pipeline is configured, we can loop waiting for new frames.
     while (true)
     {
         // Block program until frames arrive
@@ -30,7 +31,7 @@ int main(int argc, char * argv[]) try
         float dist_to_center = depth.get_distance(width / 2, height / 2);
 
         // Print the distance
-        std::cout << "The camera is facing an object " << dist_to_center << " meters away \r";
+        std::cout << "The camera is facing an object dc " << dist_to_center << " meters away \r";
     }
 
     return EXIT_SUCCESS;
